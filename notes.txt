@@ -172,3 +172,33 @@ git pull
 #但是此时合并有冲突，需要手动解决，解决方法与分支管理中解决冲突的方法一样。解决后提交，再push
 
 
+【【Tag】】
+#新建一个标签，默认为HEAD，也可以指定一个commit_id；
+git tag v1.0
+
+#创建带有说明的标签, 用-a指定标签名, -m指定说明文字：
+git tag -a v2.0 -m "version 2.0" commit_id
+
+#通过-s用私钥签名一个标签：
+git tag -s v3.0 -m "version 3.0 with PGP singed" commit_id
+
+#查看所有标签
+git tag
+
+#查看标签详细信息
+git show v1.0
+
+#删除标签: 因为创建的标签都只存储在本地，不会自动推送到远程，所以打错的标签可以在本地安全删除
+git tag -d v1.0
+
+#推送某个标签到远程
+git push origin v1.0
+#或一次性推送全部尚未推送到远程本地标签
+git push origin --tags
+
+#删除远程标签需要两步：
+#1. 从本地删除标签
+git tag -d v1.0
+#2. 从远程删除
+git push origin :refs/tags/v1.0
+#3. 查看是否真的从远程库中删除标签，可以登录GitHub查看
