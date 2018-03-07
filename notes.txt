@@ -122,3 +122,20 @@ git branch -d dev
 
 #查看分支合并图
 git log --graph
+
+#禁用Fast forward快进合并模式, 因为本次合并要创建一个新的commit, 所以加上-m参数把commit描述写进去。
+git merge --no-ff -m "merge with no-ff" dev
+
+
+【【bug分支】】
+#stash功能: 可以把当前工作现场"储藏"起来，等以后恢复现场后继续工作：
+git stash
+#查看工作现场存到哪去了
+git stash list
+#恢复工作现场有两个方法
+#1. git stash apply 但是恢复后stash内容并不删除, 需要git stash drop来删除
+#2. git stash pop 恢复的同时删除stash的内容
+
+#恢复指定stash
+git stash apply stash@{0}
+
