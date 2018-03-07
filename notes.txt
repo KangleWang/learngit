@@ -20,6 +20,8 @@ git status
 git log
 #简略日志
 git log --pretty=oneline
+#退出日志状态
+:q
 
 #回退到上一个版本
 #指向的版本是当前版本：HEAD
@@ -118,3 +120,5 @@ git merge dev[在master分支下操作]
 #删除分支
 git branch -d dev
 
+#查看分支合并图
+git log --graph
