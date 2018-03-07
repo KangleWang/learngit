@@ -92,3 +92,13 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 '''
 #3. 以后只要本地作了提交, 就可以通过以下命令把本地master分支的最新修改推送至GitHub, 我拥有真正的分布式版本库啦！
 git push origin master
+
+#从远程库克隆
+git clone git@github.com:KangleWang/hello-git.git
+
+【【分支】】
+#创建dev分支 
+#checkout表示创建 -b参数表示切换
+git checkout -b dev
+#查看当前分支
+git branch dev
