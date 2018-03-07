@@ -98,7 +98,22 @@ git clone git@github.com:KangleWang/hello-git.git
 
 【【分支】】
 #创建dev分支 
-#checkout表示创建 -b参数表示切换
+#checkout -b dev 表示创并切换 [-b:branch]
 git checkout -b dev
+#以上一行等于以下两行
+#git branch dev [dev分支如果不存在则创建]
+#git checkout dev [切换到dev分支,切换后当前是dev分支]
+
 #查看当前分支
 git branch dev
+
+#切换到master分支
+git checkout master
+
+#合并指定分支到当前分支
+git merge dev[在master分支下操作]
+#Fast-forward git提示这次合并是"快进模式", 即直接把master指向dev的当前提交, 所以合并速度非常快！ 还有其他合并方式。
+#经过测试发现，在dev分支下git merge master时提示Already up to date 但是在master分支下查看文件的时候还是dev分支修改之前的内容。
+
+#删除分支
+git branch -d dev
