@@ -202,3 +202,23 @@ git tag -d v1.0
 #2. 从远程删除
 git push origin :refs/tags/v1.0
 #3. 查看是否真的从远程库中删除标签，可以登录GitHub查看
+
+
+【【使用GitHub】】
+1. Fork
+2. clone(一定要从自己的账号下clone仓库，这样你才能推送修改)
+	git clone git@github.com:KangleWang/bootstrap.git
+3. 往自己仓库推送
+4. 希望官方库接收你的修改：发起一个pull request, 对方是否接收则不一定。
+
+#把本地库和码云的远程库关联: 库名gitee
+git remote add gitee git@gitee.com:KangleWang/learngit.git
+#把本地库和github的远程库关联: 库名github
+git remote add github git@github.com:KangleWang/learngit.git
+#查看远程库信息
+git remote -v
+#删除已有github远程库
+git remote rm origin
+#推送到GitHub和推送到码云
+#git push 库名 分支名如: 
+git push github master
