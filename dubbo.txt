@@ -1,0 +1,7 @@
+https://gitter.im/alibaba/dubbo 2018-03-08 08:58
+用于在dubbo提供一种比较简单易用的异步方式，dubbo现有的各种异步方式使用起来怪异且晦涩。
+这篇文章是当初实现的时候写的： https://mp.weixin.qq.com/s?__biz=MzAxMjQ5NDM1Mg==&mid=403540515&idx=1&sn=129354d83482ea44570254e909eea164&mpshare=1&scene=1&srcid=0906zp1tqI9iPgO5jID4lGlY&pass_ticket=ejLNVWu2aTn%2FesrGNKlr4YFzgoFMlolUj%2BZDHroifqBxyaOFeDJXV4R9DtjJNovj#rd
+
+麻烦review一下，看看能不能进入官方代码里，谢谢
+
+如果要使用这种方式的异步，除了引入dubbo包本身外，还需要引入com.alibaba:dubbo-async
